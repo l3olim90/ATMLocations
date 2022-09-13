@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PAThree.Controller">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="614.0">
+         <children>
+            <Pane fx:id="pane" prefHeight="400.0" prefWidth="380.0">
+               <children>
+                  <ImageView fx:id="grid" fitHeight="323.0" fitWidth="339.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Resources/10x10Grid.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="10.0" top="10.0" />
+               </HBox.margin>
+            </Pane>
+            <ImageView fitHeight="89.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Resources/NArrow.png" />
+               </image>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="400.0" prefWidth="285.0" spacing="5.0">
+               <children>
+                  <Label text="Your Location:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="22.0" prefWidth="202.0" spacing="10.0">
+                     <children>
+                        <Label text="Enter x:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField prefHeight="29.0" prefWidth="145.0" fx:id="xCoord">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="22.0" prefWidth="202.0" spacing="10.0">
+                     <children>
+                        <Label text="Enter y:">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="yCoord" prefHeight="29.0" prefWidth="145.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <Button fx:id="submitBtn" mnemonicParsing="false" onAction="#submitOnClick" text="Submit">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Label text="Nearest ATM:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="56.0" prefWidth="202.0">
+                     <children>
+                        <TextArea fx:id="nearestATM" prefHeight="57.0" prefWidth="217.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" />
+                  <Label text="ATM Information:">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane prefHeight="56.0" prefWidth="202.0">
+                     <children>
+                        <TextArea fx:id="atmInfo" prefHeight="57.0" prefWidth="217.0" promptText="Click on one of the ATMs">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextArea>
+                     </children>
+                  </AnchorPane>
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="abtProgBtn" mnemonicParsing="false" onAction="#abtProgOnClick" prefHeight="29.0" prefWidth="143.0" text="About Programmer">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets left="5.0" right="5.0" />
+               </opaqueInsets>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,6 @@
+5
+Spaghetti,2
+Beans,1
+Coffee,4
+Oil,5
+Rice,6
